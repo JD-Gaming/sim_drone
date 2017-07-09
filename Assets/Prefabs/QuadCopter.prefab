@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4932108514423034}
-  - component: {fileID: 114303375676079926}
+  - component: {fileID: 114085537531953608}
   m_Layer: 0
   m_Name: Motor_B_R
   m_TagString: Untagged
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4045268470979368}
-  - component: {fileID: 114091780941075074}
+  - component: {fileID: 114213972033897218}
   m_Layer: 0
   m_Name: Motor_F_R
   m_TagString: Untagged
@@ -85,7 +85,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4497107039664922}
-  - component: {fileID: 114275305125161326}
+  - component: {fileID: 114276385177075940}
   m_Layer: 0
   m_Name: Motor_F_L
   m_TagString: Untagged
@@ -118,7 +118,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4919253923576072}
-  - component: {fileID: 114020943197624064}
+  - component: {fileID: 114767337635536548}
   m_Layer: 0
   m_Name: Motor_B_L
   m_TagString: Untagged
@@ -269,7 +269,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1438413352298576}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.18
   m_Drag: 0.05
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -289,55 +289,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.16, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114020943197624064
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1908226596455776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f1b5e80dccfb44594d10b20799254f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BodyToAffect: {fileID: 54743669488700660}
-  DownwardsThrust: 3
-  PerpendicularThrust: 0.5
-  TurnsClockwise: 0
-  Power: 0
---- !u!114 &114091780941075074
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1481012154257744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f1b5e80dccfb44594d10b20799254f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BodyToAffect: {fileID: 54743669488700660}
-  DownwardsThrust: 3
-  PerpendicularThrust: 0.5
-  TurnsClockwise: 0
-  Power: 0
---- !u!114 &114275305125161326
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1644496581424142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f1b5e80dccfb44594d10b20799254f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BodyToAffect: {fileID: 54743669488700660}
-  DownwardsThrust: 3
-  PerpendicularThrust: 0.5
-  TurnsClockwise: 1
-  Power: 0
---- !u!114 &114303375676079926
+--- !u!114 &114085537531953608
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -349,10 +301,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BodyToAffect: {fileID: 54743669488700660}
-  DownwardsThrust: 3
-  PerpendicularThrust: 0.5
-  TurnsClockwise: 1
+  MaxRPM: 25000
+  RotorDiameterCm: 10
+  ForceCoefficient: 0.0000000611
+  MomentCoefficient: 0.0000000015
+  RotateClockwise: 0
   Power: 0
+  Mass: 0.04
+  MotorRadiusCm: 1.5
+--- !u!114 &114213972033897218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481012154257744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f1b5e80dccfb44594d10b20799254f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyToAffect: {fileID: 54743669488700660}
+  MaxRPM: 25000
+  RotorDiameterCm: 10
+  ForceCoefficient: 0.0000000611
+  MomentCoefficient: 0.0000000015
+  RotateClockwise: 1
+  Power: 0
+  Mass: 0.04
+  MotorRadiusCm: 1.5
+--- !u!114 &114276385177075940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644496581424142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f1b5e80dccfb44594d10b20799254f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyToAffect: {fileID: 54743669488700660}
+  MaxRPM: 25000
+  RotorDiameterCm: 10
+  ForceCoefficient: 0.0000000611
+  MomentCoefficient: 0.0000000015
+  RotateClockwise: 0
+  Power: 0
+  Mass: 0.04
+  MotorRadiusCm: 1.5
 --- !u!114 &114461225137043700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -366,6 +362,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Acceleration: {x: 0, y: 0, z: 0}
   Rotation: {x: 0, y: 0, z: 0}
+--- !u!114 &114767337635536548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1908226596455776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f1b5e80dccfb44594d10b20799254f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyToAffect: {fileID: 54743669488700660}
+  MaxRPM: 25000
+  RotorDiameterCm: 10
+  ForceCoefficient: 0.0000000611
+  MomentCoefficient: 0.0000000015
+  RotateClockwise: 1
+  Power: 0
+  Mass: 0.04
+  MotorRadiusCm: 1.5
 --- !u!114 &114877683583743050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -378,7 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sensor: {fileID: 114461225137043700}
-  FrontLeftMotor: {fileID: 114275305125161326}
-  FrontRightMotor: {fileID: 114091780941075074}
-  BackLeftMotor: {fileID: 114020943197624064}
-  BackRightMotor: {fileID: 114303375676079926}
+  FrontLeftMotor: {fileID: 114276385177075940}
+  FrontRightMotor: {fileID: 114213972033897218}
+  BackLeftMotor: {fileID: 114767337635536548}
+  BackRightMotor: {fileID: 114085537531953608}
